@@ -17,9 +17,10 @@ with open('config.json') as file:
 
 
 def get_posts_per_user_name(user_id: str, url: str):
-    time.sleep(2)
     # TODO: add date selection
+
     driver = create_logged_driver()
+
     driver.get(url)
     # Flag to check the visibility of 'Films' Section (this section's placing is just after the friend list)
     index = 0
@@ -84,12 +85,11 @@ def get_posts_per_user_name(user_id: str, url: str):
                               'post_triste': post_likes_triste,
                               'post_love': post_likes_love,
                               'post_wow':post_likes_wow})
-            print(user_id)
+    print(user_id)
 
     df = pd.DataFrame(user_post)
     save2csv(df, user_id)
     driver.quit()
-    time.sleep(1)
 
 
 def save2csv(df: pd.DataFrame, user_id: str):
