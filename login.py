@@ -9,9 +9,9 @@ def create_logged_driver():
     options = webdriver.ChromeOptions()
     # options.add_argument('headless')
     # options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-gpu')
+    # options.add_argument('--headless')
+    # options.add_argument('--no-sandbox')
+    # options.add_argument('--disable-gpu')
     options.add_argument("--disable-notifications")
     # to open chrome webbrowser and maximize the window
     driver = webdriver.Chrome(executable_path="chromedriver.exe",
